@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { CebComponent } from './components/concepts/ceb/ceb.component';
 import { SdComponent } from './components/concepts/sd/sd.component';
 import { AddContactComponent } from './components/contacts/add-contact/add-contact.component';
 import { ContactDetailsComponent } from './components/contacts/contact-details/contact-details.component';
+
 
 //Decorator  -- main switch box 
 @NgModule({
@@ -47,7 +49,8 @@ import { ContactDetailsComponent } from './components/contacts/contact-details/c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] // Step3: AppModule should be bootstrapped with a component, it is AppComponent 
