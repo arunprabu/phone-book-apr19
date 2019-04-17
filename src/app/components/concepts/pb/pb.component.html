@@ -1,0 +1,28 @@
+<div>
+  <!-- string Interpolation-->
+  <p>{{ appName}} </p> <!-- string Interpolation-->
+
+  <!-- string Interpolation-->
+  <p title="{{appName}}">Test -- have the mouse over in the element to see a tooltip</p> 
+
+  <!-- string Interpolation-->
+  <input type="text" value="{{appName}}">
+
+  <br><br>
+  <!-- Property Binding -->
+  <input type="text" [value]="appName">
+
+  <div class="red">Testing</div>
+  
+  <h2 [ngClass]="{ 'red': !isLoggedIn, 'green': isLoggedIn}">
+    Checking auth....
+  </h2>
+
+  <!-- TodO: try ngStyle -->
+
+  <!-- the following is evt binding-->
+  <button (click)="loginHandler()">Login</button>
+
+  
+
+</div>

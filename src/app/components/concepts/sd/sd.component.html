@@ -1,0 +1,14 @@
+<p>*ngIf example</p>
+<div *ngIf="isLoggedIn">
+  Logged In successfully!
+</div>
+
+<div *ngIf="!isLoggedIn">
+  Not Logged In yet!
+</div>
+
+
+<p>*ngFor</p>
+<ul class="text-left">
+  <li *ngFor="let menu of navMenus"><a href="">{{menu}}</a></li>
+</ul>
