@@ -1,3 +1,47 @@
-<p>
-  get-in-touch works!
-</p>
+<div class="container text-left">
+  <div class="row">
+    <div class="col-10">
+      <div class="jumbotron">
+        <h2>Angular 7 Reactive Forms with validation</h2>
+        <!-- form starts -->
+        <form name="form" [formGroup]="getInTouchForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName"
+            [ngClass]="{ 'is-invalid': getInTouchForm.get('firstName').touched && getInTouchForm.get('firstName').invalid }"/>
+            <div class="invalid-feedback">
+              <div>First Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" />
+            <div class="invalid-feedback">
+              <div>Last Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" class="invalid-feedback"/>
+            <div class="invalid-feedback">
+              <div >Email is required</div>
+              <div>Email seems to be not valid</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control"/>
+            <div class="invalid-feedback">
+              <div >Password is required</div>
+              <div>Password must be at least 6 characters</div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click)="sendInfoHandler()">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

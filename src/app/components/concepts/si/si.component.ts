@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SiComponent implements OnInit {
   //
   appName: string ="Phone Book App"; //string
-  year: number = 2019;  //number 
+  year: number = 2019;  //number
   isLoggedIn: boolean = false; //boolean
 
   //array
@@ -16,19 +16,13 @@ export class SiComponent implements OnInit {
     'html', 'java', 'js', 101, 102
   ]
 
-  //array another way 
+  //array another way
   skillset1 : Array<any> = [
 
   ]
 
-  //object
-  myProfile: {} = {
-    name: 'Arun',
-    exp: 12,
-    city: 'Chennai'
-  }
 
-  //object another way 
+  //object another way
   myProfile1: Object = {
 
   }

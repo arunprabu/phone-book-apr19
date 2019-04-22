@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,9 +22,10 @@ import { CebComponent } from './components/concepts/ceb/ceb.component';
 import { SdComponent } from './components/concepts/sd/sd.component';
 import { AddContactComponent } from './components/contacts/add-contact/add-contact.component';
 import { ContactDetailsComponent } from './components/contacts/contact-details/contact-details.component';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 
-//Decorator  -- main switch box 
+//Decorator  -- main switch box
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,15 +45,17 @@ import { ContactDetailsComponent } from './components/contacts/contact-details/c
     CebComponent,
     SdComponent,
     AddContactComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // Step3: AppModule should be bootstrapped with a component, it is AppComponent 
+  bootstrap: [AppComponent] // Step3: AppModule should be bootstrapped with a component, it is AppComponent
 })
 export class AppModule { }
